@@ -41,6 +41,10 @@ where_are_you(request.remote_ip, 'state', true) # returns "Berlin", "Quebec"
 where_are_you(request.remote_ip, 'country') # true is not needed in this case, returns "Germany", "Canada"
 ```
 
+## Limits
+
+IP-API.com will automatically ban IP addresses with over 240 requests per minute. Email contact@ip-api.com to unban your IP address.
+
 ## Comments
 
 Please send any questions or suggestions to sconstantinides@gmail.com
