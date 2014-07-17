@@ -3,7 +3,7 @@
 
 ## What does it do?
 
-Returns the location (city, state, or country) for the current user through their IP address (via IP-API.com).
+Returns the location (city, state, or country) for the current request using its IP address (via IP-API.com).
 
 ## How does it work?
 
@@ -13,7 +13,7 @@ Place the following in your Gemfile:
 gem 'where_are_you'
 ```
 
-To return the current user's city & state, call the following anywhere in a Controller or View:
+To lookup the current user's city & state, call the following anywhere in a Controller or View:
 
 ```ruby
 where_are_you(request.remote_ip)
