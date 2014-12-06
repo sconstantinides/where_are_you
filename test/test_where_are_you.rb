@@ -85,4 +85,21 @@ class WhereAreYouTest < Minitest::Test
       assert_equal result, 'United Kingdom'
     end
 
+  # Domestic language
+
+    def test_language_united_states
+      result = where_are_you('207.168.107.83', 'language')
+      assert_equal result, 'en'
+    end
+
+    def test_language_united_kingdom
+      result = where_are_you('131.228.17.26', 'language')
+      assert_equal result, 'en'
+    end
+
+    def test_language_congo
+      result = where_are_you('217.171.91.0', 'language')
+      assert_equal result, 'fr'
+    end
+
 end

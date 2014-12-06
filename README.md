@@ -32,7 +32,8 @@ where_are_you(request.remote_ip, 'country') # returns "United States"
 where_are_you(request.remote_ip, 'language') # returns "en"
 ```
 ## Language
-If the language you've requested is not supported, where_are_you returns nil. We do support most use cases, including languages for over 250 countries.
+
+We support languages for over 250 countries, but if the country is not supported, where_are_you returns nil.
 
 ## International
 

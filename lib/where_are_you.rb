@@ -3,13 +3,13 @@ class Object
   def where_are_you(ip, format = 'city', global = false)
 
     require 'net/http'
-    require 'json' # already included in Rails
+    require 'json'
     require 'yaml'
 
     uri = URI.parse("http://ip-api.com/json/#{ip}")
     response = Net::HTTP.get_response(uri)
     result = JSON(response.body)
-    data = YAML.load_file('data.yaml')
+    data = YAML::load_file(File.dirname(__FILE__) + '/data.yml')
 
     if result['status'] != 'success'
 
@@ -36,8 +36,10 @@ class Object
       return result['country']
 
     elsif format == 'language'
+
       formatted_country = result['country'].downcase.gsub(' ','_').gsub(',','_')
       return data[formatted_country]
+
     end
   end
 end
