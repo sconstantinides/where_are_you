@@ -3,7 +3,7 @@
 
 ## What does it do?
 
-Returns the location (city, state, or country) for the current request using its IP address (via IP-API.com).
+Returns the location (city, state, or country), or language, for the current request using its IP address (via IP-API.com).
 
 ## How does it work?
 
@@ -29,7 +29,10 @@ where_are_you(request.remote_ip) # returns "Chicago, IL"
 where_are_you(request.remote_ip, 'city') # also returns "Chicago, IL"
 where_are_you(request.remote_ip, 'state') # returns "Illinois"
 where_are_you(request.remote_ip, 'country') # returns "United States"
+where_are_you(request.remote_ip, 'language') # returns "en"
 ```
+## Language
+If the language you've requested is not supported, where_are_you returns nil. We do support most use cases, including languages for over 250 countries.
 
 ## International
 
