@@ -47,4 +47,4 @@ where_are_you(request.remote_ip, 'country') # true is not needed in this case, r
 
 ## Limits
 
-IP-API.com will automatically ban IP addresses with over 240 requests per minute. Visit http://ip-api.com/docs/unban to unban your IP address.
+IP-API.com will automatically ban IP addresses with over 150 requests per minute. Visit http://ip-api.com/docs/unban to unban your IP address.
